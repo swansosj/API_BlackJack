@@ -8,7 +8,7 @@ with Python.
 import requests
 
 #Prompt the user for how many decks they want
-
+DeckAmount = input('How many decks of cards would you like in the pile? \nYour typical game of Blackjack has 8 decks\n')
 
 #Creates empty dictionaries for the first request
 payload = {}
@@ -20,7 +20,6 @@ response = requests.get(NewShuff, headers=headers, data=payload)
 responseJSON = response.json()
 DeckID = responseJSON['deck_id']
 
-print(responseJSON)
 print("Your Deck id is: " + DeckID)
 
 carddata = {}
